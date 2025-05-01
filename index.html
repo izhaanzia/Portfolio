@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Izhaan Zia | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .text-animation {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .d-none {
+      display: none;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    }
+
+    .cta-btn:hover {
+      background-color: black;
+      color: #00ffcc;
+      box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+    <h1 class="logo" style="margin: 0; font-size: 24px;">Izhaan Zia</h1>
+    <ul class="nav-links" style="list-style: none; display: flex; gap: 20px; margin: 0;">
+      <li class="active" style="cursor: pointer;">Home</li>
+      <li><a href="contact.html" style="text-decoration: none; color: inherit;">Contact</a></li>
+    </ul>
+  </nav>
+  
+
+  <section class="hero">
+    <div class="intro">
+      <h1>Izhaan Zia</h1>
+      <p>
+        I’m <span id="typed-output" class="text-animation"></span>
+      </p>
+
+      <div class="typed-text d-none">
+        Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer
+      </div>
+
+      <a href="#projects" class="cta-btn">Let's get started</a>
+    </div>
+  
+    <div class="skills-box">
+      <h3>My Skills</h3>
+      <div class="skill">
+        <p>HTML5</p>
+        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill">
+        <p>CSS3</p>
+        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+      </div>
+      <div class="skill">
+        <p>Responsive Design</p>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+      </div>
+    </div>
+  
+    <div class="profile-pic">
+      <img src="pic.jpeg" alt="Izhaan Zia">
+    </div>
+  </section>
+
+  <section class="brands">
+    <p>Worked with</p>
+    <div class="brand-logos">
+      <span>ClickUp</span>
+      <span>Dropbox</span>
+      <span>PAYCHEX</span>
+      <span>elastic</span>
+      <span>stripe</span>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 20px; background-color: #1f1f1f; color: #aaa; margin-top: 50px;">
+    &copy; 2025 Izhaan Zia. All rights reserved.
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    const typedText = document.querySelector(".typed-text").innerText.split(", ");
+    new Typed("#typed-output", {
+      strings: typedText,
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
